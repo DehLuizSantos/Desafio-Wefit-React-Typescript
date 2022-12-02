@@ -16,7 +16,7 @@ export const BasketInformations = styled.div`
 
     span{
       font-size: ${theme.fonts.small};
-      color: ${theme.colors.gray};
+      color: ${theme.colors.gray[700]};
     }
 
     p{

@@ -1,3 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const ShoopingItemsContainer = styled.div``
+export const ShoopingItemsContainer = styled.div`
+  ${() => css`
+    text-align:center;    
+  `}
+`

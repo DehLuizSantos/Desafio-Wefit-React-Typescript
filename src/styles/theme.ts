@@ -8,9 +8,16 @@ import {
   
   export const commonColors = {
     background: '#2F2E41',
-    blue: '##009EDD',
     white: '#fff',
-    gray: "#999999"   
+    green: '#039B00',
+    blue: {
+      700: '#2F2E41',
+      500: '#009EDD',
+    },
+    gray: {
+      700: "#999999",
+      500: "#333333"
+    }
   }
   
   const responsive = {
