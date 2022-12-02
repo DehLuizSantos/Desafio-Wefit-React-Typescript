@@ -6,5 +6,30 @@ export const mocks = [
     cardImg: viuvaNegra,
     cardName: 'Viúva Negra',
     cardValue: 9.99
-  }
+  },
+  {
+    cardImg: viuvaNegra,
+    cardName: 'Viúva Negra',
+    cardValue: 9.99
+  },
+  {
+    cardImg: viuvaNegra,
+    cardName: 'Viúva Negra',
+    cardValue: 9.99
+  },
+  {
+    cardImg: viuvaNegra,
+    cardName: 'Viúva Negra',
+    cardValue: 9.99
+  },
+  {
+    cardImg: viuvaNegra,
+    cardName: 'Viúva Negra',
+    cardValue: 9.99
+  },
+  {
+    cardImg: viuvaNegra,
+    cardName: 'Viúva Negra',
+    cardValue: 9.99
+  },
 ]

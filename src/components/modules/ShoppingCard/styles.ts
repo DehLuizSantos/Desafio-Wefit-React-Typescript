@@ -8,6 +8,13 @@ export const ShoppingCardContainer = styled.div`
     margin: 0 auto;
     padding: 10px 11px;
     width: 343px;
+    margin-bottom: 16px;
+
+    ${theme.responsive.laptop(css`
+      width: 309px;
+      height: 305px;
+      margin: 0;
+    `)}
   `}
 `
 
