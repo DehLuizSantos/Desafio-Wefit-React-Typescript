@@ -34,7 +34,7 @@ export const LoaderSpinner = styled.div`
 
 export const LoaderBall = styled.div`
   ${({theme}) => css`
-    background: ${theme.colors.background};
+    background: ${theme.colors.blue[700]};
     border-radius: 50%;
     height: 57px;
     width: 57px;

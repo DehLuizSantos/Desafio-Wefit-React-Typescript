@@ -7,7 +7,6 @@ import {
   } from 'styled-components'
   
   export const commonColors = {
-    background: '#2F2E41',
     white: '#fff',
     green: '#039B00',
     blue: {
@@ -15,8 +14,10 @@ import {
       500: '#009EDD',
     },
     gray: {
-      700: "#999999",
-      500: "#333333"
+      700: "#333333",
+      600: '#3F3D56',
+      500: "#999999",
+      400: '#D9D9D9'
     }
   }
   
@@ -68,7 +69,8 @@ import {
     medium: '14px',
     large: '16px',
     xLarge: '18px',
-    xxLarge: '20px'
+    xxLarge: '20px',
+    xxxLarge: '24px'
   }
   
   const commonTheme = {

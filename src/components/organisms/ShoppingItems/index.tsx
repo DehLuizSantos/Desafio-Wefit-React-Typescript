@@ -1,5 +1,5 @@
 import React from 'react'
-import ShoppingCard from '../../modules/ShoppingCard'
+import ShoppingCard from '../../molecules/ShoppingCard'
 import * as S from './styles'
 import { mocks } from '../../../mock/mock'
 

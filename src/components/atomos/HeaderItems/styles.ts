@@ -10,20 +10,9 @@ export const HeaderItemsWrapper = styled.div`
 `
 
 export const BasketInformations = styled.div`
-  ${({theme}) => css`
+  ${() => css`
     text-align:end;
     font-weight: 600;
-
-    span{
-      font-size: ${theme.fonts.small};
-      color: ${theme.colors.gray[700]};
-    }
-
-    p{
-      font-size: ${theme.fonts.medium};
-      color:${theme.colors.white};
-    }
-    
   `}
 
 `

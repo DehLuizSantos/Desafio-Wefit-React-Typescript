@@ -23,7 +23,7 @@ export const ShoppingInfos = styled.div`
     font-weight: 700;
     margin-bottom: 8px;
     h3{
-      color: ${theme.colors.gray[500]};
+      color: ${theme.colors.gray[700]};
       font-size: ${theme.fonts.small};
       line-height: 16px;
       margin-top: 7px;

@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import Header from './components/molecules/Header';
+import Header from './components/modules/Header';
 import Router from './router/Router';
 import { Container } from './styles/container';
 import GlobalStyles from './styles/global';

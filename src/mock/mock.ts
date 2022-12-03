@@ -33,3 +33,11 @@ export const mocks = [
     cardValue: 9.99
   },
 ]
+
+export const itemsAddToCart = [
+  {
+    itemName: 'Homem Aranha',
+    itemPrice: 29.99,
+    itemImg: viuvaNegra
+  }
+]

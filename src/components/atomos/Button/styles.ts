@@ -11,6 +11,7 @@ export const ButtonContainer = styled.button<buttonProps>`
     background-color: ${colorStyle === 'primary' ? theme.colors.blue[500] : theme.colors.green};
     border-radius: 4px;
     color: ${theme.colors.white};
+    cursor: pointer;
     display: flex;
     font-size: ${theme.fonts.small}; 
     font-weight: 700;
@@ -18,6 +19,11 @@ export const ButtonContainer = styled.button<buttonProps>`
     height: 40px;
     justify-content:center;
     width:100%;
+
+    &:hover{
+      opacity: 0.8;
+      transition: 0.5s;
+    }
   
   `}
 `
