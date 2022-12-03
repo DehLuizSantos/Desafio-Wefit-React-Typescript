@@ -8,17 +8,19 @@ type headerItemsProps = {
     items: number
 }
 
-const HeaderItems: React.FC<headerItemsProps> = ({items}) => {    
-  function goToShopping(){
-    console.log('shopping')
-  }
+const HeaderItems: React.FC<headerItemsProps> = ({items}) => {
+ 
+
+ 
   return(
     <S.HeaderItemsWrapper>
       <S.BasketInformations>
         <PSansSmall className="hide-on-mobile">Meu Carrinho</PSansSmall>
         <SpanSansSmall>{items} itens</SpanSansSmall>     
       </S.BasketInformations>
-      <IconButton icon={ShoppingBasket} iconAlt="Shopping Basket" onClickIcon={goToShopping} />
+      <a href='/cart'>
+        <IconButton icon={ShoppingBasket} iconAlt="Shopping Basket" />
+      </a>
     </S.HeaderItemsWrapper>
     )
 }

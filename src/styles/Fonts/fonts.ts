@@ -9,6 +9,15 @@ export const H1SansLogo = styled.h1`
   `}
 `
 
+export const H2SansInfos = styled.h2`
+  ${({theme}) => css`
+    font-size: ${theme.fonts.xxLarge};  
+    line-height: 27px;
+    font-weight: 700;
+    color:${theme.colors.blue[700]};  
+  `}
+`
+
 export const H3SansPrice = styled.h3`
   ${({theme}) => css`
     font-size: ${theme.fonts.large};

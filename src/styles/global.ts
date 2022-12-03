@@ -18,9 +18,9 @@ const GlobalStyles = createGlobalStyle`
     border: none;
   }
   a {
+    text-decoration:none;
     &:hover, &:focus, &:active {
       cursor: pointer;
-      text-decoration: none;
     }
   }
 `

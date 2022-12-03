@@ -5,11 +5,13 @@ import * as S from './styles'
 
 
 const Header: React.FC = () => {
-    return(
-        <S.ContainerHeader>
+  return(
+    <S.ContainerHeader>
+        <a href='/'>
             <H1SansLogo>WeMovies</H1SansLogo>
-            <HeaderItems items={4}/>
-        </S.ContainerHeader>
+        </a>
+        <HeaderItems items={4}/>
+    </S.ContainerHeader>
     )
 }
 
