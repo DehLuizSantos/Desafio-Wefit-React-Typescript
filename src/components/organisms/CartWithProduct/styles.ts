@@ -7,6 +7,11 @@ export const CartWithProductContainer = styled.div`
     min-height: 716px;
     padding: 16px;
 
+    ${theme.responsive.tablet(css`
+      min-height:100%;
+    
+    `)}
+
     .items-header{
       ${theme.responsive.tablet(css`   
         margin-bottom: 21px;

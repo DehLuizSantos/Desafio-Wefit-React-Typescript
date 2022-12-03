@@ -10,12 +10,17 @@ type finishOrderProps = {
 const FinishOrder: React.FC<finishOrderProps> = ({totalPrice}) => {
   return(
     <S.FinishOrderContainer>
-      <div className="divider" />
-      <div className="total">
-        <SpanSansSmall>TOTAL</SpanSansSmall>
-        <SpanSansLarge>R${totalPrice}</SpanSansLarge>
+      <div className="divider-finish" />
+
+      <div className="finish-order">
+        <div className="total">
+          <SpanSansSmall>TOTAL</SpanSansSmall>
+          <SpanSansLarge>R${totalPrice}</SpanSansLarge>
+        </div>
+        <div className="button-finish">
+          <Button colorStyle='primary' hasIcon={false}>FINALIZAR PEDIDO</Button>
+        </div>
       </div>
-      <Button colorStyle='primary' hasIcon={false}>FINALIZAR PEDIDO</Button>
     </S.FinishOrderContainer>
   )
 }
