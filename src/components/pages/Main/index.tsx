@@ -2,7 +2,7 @@ import React from 'react'
 import ShoppingItems from '../../organisms/ShoppingItems'
 import Loader from '../../atomos/Loader'
 import * as S from './styles'
-import ProductService from '../../../services/product.service'
+import ProductService from '../../../services/products.service'
 import { ProductProps } from '../../../interfaces/products.interface'
 
 const productService = new ProductService()
@@ -19,13 +19,14 @@ const Main: React.FC = () => {
       setLoading(false)
       
     } catch(error){
-      console.log(error)
+      console.error(error)
     }
   },[])
 
   
   React.useEffect(()=>{
-    getProducts()
+      getProducts()
+    
   },[getProducts])
 
   return(
@@ -33,7 +34,7 @@ const Main: React.FC = () => {
       {loading ? (
          <Loader />
       ) : (
-          <ShoppingItems products={products} />     
+          <ShoppingItems products={products} />             
       )}
     </S.ContainerMain>
     )

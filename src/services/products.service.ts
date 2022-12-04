@@ -1,9 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
 
-
-
-
 export default class ProductService {
   private http: AxiosInstance;
   constructor() {
@@ -23,6 +20,4 @@ export default class ProductService {
       return { error: true };
     }
   }
-
-
 }

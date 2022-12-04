@@ -3,14 +3,15 @@ import * as S from './styles'
 import shoppingCart from '../../../assets/icons/shoppingCart.svg'
 
 type buttonProps = {
-  colorStyle: 'primary' | 'secondary'
+  colorStyle?: string
   hasIcon?: boolean
   hasAdd?: boolean
+  onClickBtn?: (data: any) => void
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-const Button: React.FC<buttonProps> = ({hasIcon, hasAdd, colorStyle='primary', ...props}) => {
+const Button: React.FC<buttonProps> = ({hasIcon, hasAdd, onClickBtn, colorStyle='primary', ...props}) => {
   return(
-      <S.ButtonContainer colorStyle={colorStyle}>
+      <S.ButtonContainer colorStyle={colorStyle} onClick={onClickBtn}>
         {hasIcon && (
           <S.ShoppingCart>
             <img src={shoppingCart} alt="Shopping cart" />

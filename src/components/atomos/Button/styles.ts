@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 type buttonProps = {
-  colorStyle: 'primary' | 'secondary'
+  colorStyle?: string
 }
 
 
