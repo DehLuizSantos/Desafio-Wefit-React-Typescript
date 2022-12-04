@@ -1,20 +1,17 @@
 import React from 'react'
+import { ProductProps } from '../../../interfaces/products.interface'
 import Button from '../../atomos/Button'
 import * as S from './styles'
 
-export type shoppingCardProps = {
-  cardImg: string
-  cardName: string
-  cardValue: number
-}
 
-export const ShoppingCard: React.FC<shoppingCardProps> = ({cardName, cardImg, cardValue}) =>{
+
+export const ShoppingCard: React.FC<ProductProps> = ({id, image, price, title}) =>{
   return(
       <S.ShoppingCardContainer>
-        <img src={cardImg} alt={cardName}/>
+        <img src={image} alt={title}/>
         <S.ShoppingInfos>
-          <h3>{cardName}</h3>
-          <p>R$ {cardValue}</p>
+          <h3>{title}</h3>
+          <p>R$ {price}</p>
         </S.ShoppingInfos>
         <Button colorStyle='primary' hasIcon>
           ADICIONAR AO CARRINHO 

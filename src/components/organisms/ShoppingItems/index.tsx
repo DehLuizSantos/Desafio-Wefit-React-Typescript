@@ -1,14 +1,14 @@
 import React from 'react'
 import ShoppingCard from '../../molecules/ShoppingCard'
 import * as S from './styles'
-import { mocks } from '../../../mock/mock'
+import { ProductProps, ProductsProps } from '../../../interfaces/products.interface'
 
-const ShoopingItems: React.FC = () => {
- 
+const ShoopingItems: React.FC<ProductsProps> = ({products}) => {
+   
   return(
-      <S.ShoopingItemsContainer>
-      {mocks.map((card, index) =>(
-        <ShoppingCard cardImg={card.cardImg} cardName={card.cardName} cardValue={card.cardValue} key={index} />
+      <S.ShoopingItemsContainer>     
+      {products?.map((card: ProductProps, index) => (
+        <ShoppingCard id={card.id} image={card.image} price={card.price} title={card.title} key={index} />
       ))}
       </S.ShoopingItemsContainer>
   )
