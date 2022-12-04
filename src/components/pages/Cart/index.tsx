@@ -3,13 +3,13 @@ import CartWithProduct from '../../organisms/CartWithProduct'
 // import CartWithoutProduct from '../../organisms/CartWithoutProduct'
 import * as S from './styles'
 
-const Card: React.FC = () => {
+const Cart: React.FC = () => {
     return(
-        <S.ContainerCard>
+        <S.ContainerCart>
            {/* <CartWithoutProduct /> */}
            <CartWithProduct />
-        </S.ContainerCard>
+        </S.ContainerCart>
     )
 }
 
-export default Card
+export default Cart

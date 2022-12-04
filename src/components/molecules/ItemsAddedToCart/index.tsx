@@ -11,13 +11,13 @@ export type ItemsAddedToCartProps = {
 
 export const ItemsAddedToCart: React.FC<ItemsAddedToCartProps> = ({itemName, itemImg, itemPrice}) =>{
   return(
-      <S.ItemsAddedToCartContainer>
-        <img src={itemImg} alt={itemName} />
-        <div className="informations">
-          <PriceInformations itemName={itemName} itemPrice={itemPrice} />
-          <ItemsPriceControler itemPrice={itemPrice}/>
-        </div>        
-      </S.ItemsAddedToCartContainer>
+    <S.ItemsAddedToCartContainer>
+      <img src={itemImg} alt={itemName} />
+      <div className="informations">
+        <PriceInformations itemName={itemName} itemPrice={itemPrice} />
+        <ItemsPriceControler itemPrice={itemPrice}/>
+      </div>        
+    </S.ItemsAddedToCartContainer>
   )
 }
 

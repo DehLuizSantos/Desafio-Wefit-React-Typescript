@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { SpanSansLarge, SpanSansSmall } from '../../../styles/Fonts/fonts'
 import Button from '../Button';
 import * as S from './styles'
@@ -16,9 +17,9 @@ const FinishOrder: React.FC<finishOrderProps> = ({totalPrice}) => {
           <SpanSansSmall>TOTAL</SpanSansSmall>
           <SpanSansLarge>R${totalPrice}</SpanSansLarge>
         </div>
-        <a href='/finish' className="button-finish">
+        <Link to='/finish' className="button-finish">
           <Button colorStyle='primary' hasIcon={false}>FINALIZAR PEDIDO</Button>
-        </a>
+        </Link>
       </div>
     </S.FinishOrderContainer>
   )

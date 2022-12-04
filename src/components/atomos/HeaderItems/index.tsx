@@ -3,6 +3,7 @@ import * as S from './styles'
 import ShoppingBasket from '../../../assets/icons/shoppingBasket.svg'
 import { PSansSmall, SpanSansSmall} from "../../../styles/Fonts/fonts";
 import IconButton from "../IconButton";
+import { Link } from 'react-router-dom'
 
 type headerItemsProps = {
     items: number
@@ -18,9 +19,9 @@ const HeaderItems: React.FC<headerItemsProps> = ({items}) => {
         <PSansSmall className="hide-on-mobile">Meu Carrinho</PSansSmall>
         <SpanSansSmall>{items} itens</SpanSansSmall>     
       </S.BasketInformations>
-      <a href='/cart'>
+      <Link to='/cart'>
         <IconButton icon={ShoppingBasket} iconAlt="Shopping Basket" />
-      </a>
+      </Link>
     </S.HeaderItemsWrapper>
     )
 }
