@@ -6,7 +6,7 @@ export default class CartItens {
   private http: AxiosInstance;
   constructor() {
     this.http = axios.create({
-      baseURL: 'http://localhost:3001'
+      baseURL: process.env.REACT_APP_WEMOVIES_API_URL
     });
   }
 
