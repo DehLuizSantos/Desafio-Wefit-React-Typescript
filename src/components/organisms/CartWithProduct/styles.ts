@@ -14,10 +14,15 @@ export const CartWithProductContainer = styled.div`
 
     .items-header{
       ${theme.responsive.tablet(css`   
+        display: flex;
         margin-bottom: 21px;
+        max-width: 80%;
+
         .spancing{
-          margin: 0 150px 0 280px;
-        }     
+          margin: 0 170px 0 220px;
+         
+        }
+         
       `)}
     }
   `}

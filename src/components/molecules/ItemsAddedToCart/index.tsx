@@ -1,22 +1,20 @@
 import React from 'react'
+import { ProductProps } from '../../../interfaces/products.interface'
 import ItemsPriceControler from '../../atomos/ItemsPriceControler'
 import PriceInformations from '../../atomos/PriceInformations'
 import * as S from './styles'
 
-export type ItemsAddedToCartProps = {
-  itemImg: string
-  itemName: string
-  itemPrice: number
-}
 
-export const ItemsAddedToCart: React.FC<ItemsAddedToCartProps> = ({itemName, itemImg, itemPrice}) =>{
+
+
+export const ItemsAddedToCart: React.FC<ProductProps> = ({title, image, price, id}) =>{
   return(
     <S.ItemsAddedToCartContainer>
-      <img src={itemImg} alt={itemName} />
+      <img src={image} alt={title} />
       <div className="informations">
-        <PriceInformations itemName={itemName} itemPrice={itemPrice} />
-        <ItemsPriceControler itemPrice={itemPrice}/>
-      </div>        
+        <PriceInformations title={title} price={price} id={id} image={image} />
+        <ItemsPriceControler price={price} id={id} image={image} title={title} />
+      </div> 
     </S.ItemsAddedToCartContainer>
   )
 }

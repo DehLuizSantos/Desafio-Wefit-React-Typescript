@@ -8,7 +8,8 @@ export const ItemsPriceControlerContainer = styled.div`
     margin: 23px 0 0 16px;
 
     ${theme.responsive.tablet(css`
-      margin: 15px 52px 0 158px;
+      /* margin: 15px 52px 0 158px; */
+      justify-content: space-around;
     `)}
 
     .text-area-wrapper{
@@ -17,6 +18,7 @@ export const ItemsPriceControlerContainer = styled.div`
 
     .subtotal-area{
       margin-left: auto;
+      padding-left: 30px;
 
       ${theme.responsive.tablet(css`
         margin: 0 auto 0 52px;      

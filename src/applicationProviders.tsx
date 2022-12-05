@@ -6,6 +6,8 @@ import GlobalStyles from './styles/global'
 import theme from './styles/theme'
 import { Wrapper } from './styles/wrapper'
 import { BrowserRouter, Switch } from 'react-router-dom'
+import CartItenProvider from './context/cartItens.context'
+
 
 
 type applicationProps = {
@@ -14,19 +16,21 @@ type applicationProps = {
 
 const ApplicationProviders: React.FC<applicationProps> = ({ children }) => {
   return(
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-      <Switch>
-        <Wrapper>
-          <Container>
-            <Header />
-              {children}
-            </Container>
-          </Wrapper>
-          </Switch>
-          <GlobalStyles />
-      </BrowserRouter>
-    </ThemeProvider>
+    <CartItenProvider>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+        <Switch>
+          <Wrapper>
+            <Container>              
+              <Header />
+                {children}
+              </Container>
+            </Wrapper>
+            </Switch>
+            <GlobalStyles />
+        </BrowserRouter>
+      </ThemeProvider>
+    </CartItenProvider>
   )
 }
 

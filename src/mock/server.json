@@ -39,10 +39,10 @@
   ],
   "cartItens": [
     {
-      "id": 2,
-      "title": "Shang-chi",
-      "price": 30.99,
-      "image": "https://www.imagemhost.com.br/images/2022/07/10/shang-chi.png"
+      "id": 4,
+      "title": "Eternos",
+      "price": 17.9,
+      "image": "https://www.imagemhost.com.br/images/2022/07/10/eternals.png"
     }
   ]
 }

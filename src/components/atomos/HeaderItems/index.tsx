@@ -6,7 +6,7 @@ import IconButton from "../IconButton";
 import { Link } from 'react-router-dom'
 
 type headerItemsProps = {
-    items: number
+    items?: number
 }
 
 const HeaderItems: React.FC<headerItemsProps> = ({items}) => {

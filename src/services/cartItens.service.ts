@@ -21,4 +21,26 @@ export default class CartItens {
       return { error: true };
     }
   }
+  public async getCartItem() {
+    try {     
+      const response: AxiosResponse = await this.http.get('/cartItens');
+      return { data: response.data, error: false };
+    } catch (error: AxiosError | any) {
+      if (error.response) {
+        return { statusCode: error.response.status, error: true };
+      }
+      return { error: true };
+    }
+  }
+  public async deleteCartItem(itemId: number) {
+    try {     
+      const response: AxiosResponse = await this.http.delete(`/cartItens/${itemId}`);
+      return { data: response.data, error: false };
+    } catch (error: AxiosError | any) {
+      if (error.response) {
+        return { statusCode: error.response.status, error: true };
+      }
+      return { error: true };
+    }
+  }
 }

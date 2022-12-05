@@ -1,7 +1,3 @@
-export interface ProductsProps {
-  products?: Array<ProductProps>
-}
-
 export interface ProductProps {
   id: number
   title:string

@@ -4,7 +4,8 @@ import * as S from './styles'
 type iconButtonProps = {
   icon: string
   iconAlt: string
-  onClickIcon?: () => void
+  onClickIcon?: (data: any) => void
+
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 const IconButton: React.FC<iconButtonProps> = ({icon, iconAlt, onClickIcon, ...props}) => {

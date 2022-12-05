@@ -2,6 +2,7 @@ import React from 'react'
 import { ProductProps } from '../../../interfaces/products.interface'
 import Button from '../../atomos/Button'
 import * as S from './styles'
+import {priceMasked} from '../../../utils/masked'
 
 type ShoopingCardProps = {
   onClickAdd: (id: number) => void
@@ -22,7 +23,7 @@ export const ShoppingCard: React.FC<ProductProps & ShoopingCardProps> = ({id, im
         <img src={image} alt={title}/>
         <S.ShoppingInfos>
           <h3>{title}</h3>
-          <p>R$ {price}</p>
+          <p>{priceMasked(price)}</p>
         </S.ShoppingInfos>
         <Button colorStyle={colorBtn} hasIcon hasAdd={numberBtn === 1 ? true : false} onClickBtn={() => addToCart(id)}>
           ADICIONAR AO CARRINHO 

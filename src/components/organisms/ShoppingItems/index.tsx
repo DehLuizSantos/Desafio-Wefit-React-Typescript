@@ -1,27 +1,33 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ShoppingCard from '../../molecules/ShoppingCard'
 import * as S from './styles'
-import { ProductProps, ProductsProps } from '../../../interfaces/products.interface'
+import { ProductProps } from '../../../interfaces/products.interface'
 import CartItens from '../../../services/cartItens.service'
+import { CartItensContext } from '../../../context/cartItens.context'
 
 const cartItens = new CartItens()
 
-const ShoopingItems: React.FC<ProductsProps> = ({products}) => {
+type ShoppingItemsProps = {
+  products?: Array<ProductProps>
+}
 
-  const postAddToCard = React.useCallback(async (id: number) => {
+const ShoopingItems: React.FC<ShoppingItemsProps> = ({products}) => {
+  const { setCardProducts } = useContext(CartItensContext)
+
+  const postAddToCard = React.useCallback(async (id: number) => {   
     try{
       if(typeof products !== 'undefined'){
         const cartItem = products.find((product) => product.id === id)  
-        const result = await cartItens.postCartItem(cartItem)
-        console.log(result)
+        await cartItens.postCartItem(cartItem)
+        const result = await cartItens.getCartItem()
+        setCardProducts(result.data)
       }
       
     }catch(error){
       console.error(error)
     }
-  },[products]) 
-
-
+  },[products, setCardProducts]) 
+  
   return(
       <S.ShoopingItemsContainer>     
       {products?.map((card: ProductProps, index) => (
