@@ -31,16 +31,17 @@
 
 👉 demo: https://desafio-wefit-react-typescript.vercel.app/
 
-- [IMPORTANT]
+<h2>IMPORTANT</h2>
+<p>
   In this link, you cannot access the features related to post, delete and put. Because DB is local.
   To work, clone the project and follow the tutorial below.
+</p>
 
 # :computer: Technologies
 
 This project was made using the follow technologies:
 
 - [Typescript](https://www.typescriptlang.org/)
-- [React-Bootstrap](https://react-bootstrap.github.io/)
 - [Styled-Components](https://styled-components.com/)
 - [JSON-Server](https://www.npmjs.com/package/json-server)
 
