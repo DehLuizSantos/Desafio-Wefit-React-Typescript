@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+<p align="center">
+   <a href="https://www.linkedin.com/in/andr%C3%A9-luiz-844207102/">
+      <img alt="André Luiz Santos" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+   </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</p>
 
-## Available Scripts
+<div align="center">
 
-In the project directory, you can run:
+<sub> WEMOVIES | Typescript| ReactJS </sub>
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+  <sub>WEMOVIES project. Built with ❤︎ by
+    <a href="https://github.com/DehLuizSantos">André Luiz Santos</a>
+  </sub>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br />
+<div align="center">
+  <h1>WEMOVIES</h1>
+</div>
 
-### `npm test`
+<br />
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+--
 
-### `npm run build`
+# :eyes: Demo Website
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+👉 demo: https://desafio-wefit-react-typescript.vercel.app/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# :computer: Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project was made using the follow technologies:
 
-### `npm run eject`
+- [Typescript](https://www.typescriptlang.org/)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+- [Styled-Components](https://styled-components.com/)
+- [JSON-Server](https://www.npmjs.com/package/json-server)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# :construction_worker: How to run
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**You need to install [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/) first, then:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Install Dependencies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+````bash
+yarn
 
-## Learn More
+Make a .env-local file
+fill the file with your database informations and baseUrl "http://localhost:3000" (local)"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Run Aplication
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+yarn start - start aplication on ReactJS
+yarn server - start aplication on JSON-server (Mock - DATABASE)
+
+````
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br>
+
+Made with love by [André Luiz Santos](https://github.com/DehLuizSantos) 🚀

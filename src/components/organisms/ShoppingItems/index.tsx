@@ -17,7 +17,7 @@ const ShoopingItems: React.FC<ShoppingItemsProps> = ({products}) => {
   const postAddToCard = React.useCallback(async (id: number) => {   
     try{
       if(typeof products !== 'undefined'){
-        const cartItem = products.find((product) => product.id === id)  
+        const cartItem = products.find((product) => product.id === id)        
         await cartItens.postCartItem(cartItem)
         const result = await cartItens.getCartItem()
         setCardProducts(result.data)

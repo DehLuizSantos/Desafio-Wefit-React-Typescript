@@ -6,17 +6,19 @@ import Button from '../Button';
 import * as S from './styles'
 
 type finishOrderProps = {
-  totalPrice: number;
+  totalValue: number;
 }
 
-const FinishOrder: React.FC<finishOrderProps> = ({totalPrice}) => {
+const FinishOrder: React.FC<finishOrderProps> = ({totalValue}) => {
+  
+
   return(
     <S.FinishOrderContainer>
       <div className="divider-finish" />
       <div className="finish-order">
         <div className="total">
           <SpanSansSmall>TOTAL</SpanSansSmall>
-          <SpanSansLarge>{priceMasked(totalPrice)}</SpanSansLarge>
+          <SpanSansLarge>{priceMasked(totalValue)}</SpanSansLarge>
         </div>
         <Link to='/finish' className="button-finish">
           <Button colorStyle='primary' hasIcon={false}>FINALIZAR PEDIDO</Button>

@@ -43,4 +43,15 @@ export default class CartItens {
       return { error: true };
     }
   }
+  public async putQuantityItem(id: number, body: ProductProps | undefined) {
+    try {     
+      const response: AxiosResponse = await this.http.put(`/cartItens/${id}`,body);
+      return { data: response.data, error: false };
+    } catch (error: AxiosError | any) {
+      if (error.response) {
+        return { statusCode: error.response.status, error: true };
+      }
+      return { error: true };
+    }
+  }
 }

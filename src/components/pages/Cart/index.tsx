@@ -7,11 +7,11 @@ import * as S from './styles'
 const Cart: React.FC = () => {
   const { cardProduts } = useContext(CartItensContext)
   return(
-    <S.ContainerCart>
-      {cardProduts && (
-        cardProduts.length === 0 ? (<CartWithoutProduct />   ) : ( <CartWithProduct />)
-      )}
-    </S.ContainerCart>
+      <S.ContainerCart>
+        {cardProduts && (
+          cardProduts.length === 0 ? (<CartWithoutProduct />   ) : ( <CartWithProduct />)
+        )}
+      </S.ContainerCart>
     )
 }
 
