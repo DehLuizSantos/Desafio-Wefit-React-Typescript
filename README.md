@@ -31,6 +31,10 @@
 
 👉 demo: https://desafio-wefit-react-typescript.vercel.app/
 
+- [IMPORTANT]
+  In this link, you cannot access the features related to post, delete and put. Because DB is local.
+  To work, clone the project and follow the tutorial below.
+
 # :computer: Technologies
 
 This project was made using the follow technologies:
