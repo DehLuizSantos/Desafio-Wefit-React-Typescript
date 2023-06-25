@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const Wrapper = styled.div`
   ${({theme})=> css`   
     background-color: ${theme.colors.blue[700]};
-    height: 100%;
+    min-height: 100vh;
     padding-bottom: 100px;
 
     .hide-on-mobile{
