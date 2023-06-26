@@ -7,9 +7,11 @@ import CartItemsUser from '../../organisms/CartWithProduct';
 const Cart: React.FC = () => {
   const { cardProduts, loading } = useContext(CartItensContext);
   return (
-    <S.ContainerCart>
-      {loading ? <Loader /> : <CartItemsUser cardProduts={cardProduts} />}
-    </S.ContainerCart>
+    <Loader loading={loading}>
+      <S.ContainerCart>
+        <CartItemsUser cardProduts={cardProduts} />
+      </S.ContainerCart>
+    </Loader>
   );
 };
 

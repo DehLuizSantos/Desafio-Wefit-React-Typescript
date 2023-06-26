@@ -13,15 +13,14 @@ export const ShoppingCard: React.FC<ProductProps & ShoopingCardProps> = ({
   image,
   price,
   title,
+  added,
   onClickAdd
 }) => {
-  const [numberBtn, setNumberBtn] = React.useState(0);
-  const [colorBtn, setColorBtn] = React.useState('primary');
+  const [colorBtn, setColorBtn] = React.useState(added ? 'secondary' : 'primary');
 
   const addToCart = React.useCallback(
     (id: number) => {
       setColorBtn('secondary');
-      setNumberBtn(1);
       onClickAdd(id);
     },
     [onClickAdd]
@@ -34,13 +33,8 @@ export const ShoppingCard: React.FC<ProductProps & ShoopingCardProps> = ({
         <h3>{title}</h3>
         <p>{priceMasked(price)}</p>
       </S.ShoppingInfos>
-      <Button
-        colorStyle={colorBtn}
-        hasIcon
-        hasAdd={numberBtn === 1 ? true : false}
-        onClickBtn={() => addToCart(id)}
-      >
-        ADICIONAR AO CARRINHO
+      <Button colorStyle={colorBtn} hasIcon hasAdd={added} onClickBtn={() => addToCart(id)}>
+        ADICIONADO AO CARRINHO
       </Button>
     </S.ShoppingCardContainer>
   );

@@ -5,42 +5,54 @@
       "title": "Viúva Negra",
       "price": 9.99,
       "image": "https://wefit-react-web-test.s3.amazonaws.com/viuva-negra.png",
-      "quantity": 1
+      "quantity": 1,
+      "added": false,
+      "ordem": 1
     },
     {
       "id": 2,
       "title": "Shang-chi",
       "price": 30.99,
       "image": "https://wefit-react-web-test.s3.amazonaws.com/shang-chi.png",
-      "quantity": 1
+      "quantity": 1,
+      "added": false,
+      "ordem": 2
     },
     {
       "id": 3,
       "title": "Homem Aranha",
       "price": 29.9,
       "image": "https://wefit-react-web-test.s3.amazonaws.com/spider-man.png",
-      "quantity": 1
-    },
-    {
-      "id": 5,
-      "title": "Morbius",
-      "price": 1.5,
-      "image": "https://wefit-react-web-test.s3.amazonaws.com/morbius-1.png",
-      "quantity": 1
-    },
-    {
-      "id": 6,
-      "title": "Batman",
-      "price": 21.9,
-      "image": "https://wefit-react-web-test.s3.amazonaws.com/the-batman.png",
-      "quantity": 1
+      "quantity": 1,
+      "added": false,
+      "ordem": 3
     },
     {
       "id": 4,
+      "title": "Morbius",
+      "price": 1.5,
+      "image": "https://wefit-react-web-test.s3.amazonaws.com/morbius-1.png",
+      "quantity": 1,
+      "added": false,
+      "ordem": 4
+    },
+    {
+      "id": 5,
+      "title": "Batman",
+      "price": 21.9,
+      "image": "https://wefit-react-web-test.s3.amazonaws.com/the-batman.png",
+      "quantity": 1,
+      "added": false,
+      "ordem": 5
+    },
+    {
+      "id": 6,
       "title": "Eternos",
       "price": 17.9,
       "image": "https://wefit-react-web-test.s3.amazonaws.com/eternals.png",
-      "quantity": 1
+      "quantity": 1,
+      "added": false,
+      "ordem": 6
     }
   ],
   "cartItens": [
@@ -49,7 +61,9 @@
       "title": "Homem Aranha",
       "price": 29.9,
       "image": "https://wefit-react-web-test.s3.amazonaws.com/spider-man.png",
-      "quantity": 1
+      "quantity": 1,
+      "added": false,
+      "ordem": 3
     }
   ]
 }

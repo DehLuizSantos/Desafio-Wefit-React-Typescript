@@ -11,7 +11,7 @@ type CartItensProviderProps = {
 };
 interface ProductItemsProps {
   products: ProductProps[];
-  setProducts: Dispatch<React.SetStateAction<ProductProps[] | any>>;
+  setProducts: Dispatch<React.SetStateAction<ProductProps[]>>;
   loading: boolean;
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
