@@ -1,45 +1,53 @@
 import React, { Dispatch } from 'react';
-import { createContext } from 'react'
+import { createContext } from 'react';
 
-import { ProductProps } from '../interfaces/products.interface'
-import CartItens from '../services/cartItens.service'
+import { ProductProps } from '../interfaces/products.interface';
+import CartItens from '../services/cartItens.service';
 
-
-const cardItens = new CartItens()
+const cardItens = new CartItens();
 
 type CartItensProviderProps = {
-  children?: JSX.Element
-}
+  children?: JSX.Element;
+};
 interface CartItensProps {
   cardProduts: ProductProps[];
-  setCardProducts: Dispatch<React.SetStateAction<ProductProps[] | any>>
+  setCardProducts: Dispatch<React.SetStateAction<ProductProps[] | any>>;
+  loading: boolean;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const CartItensContext = createContext({} as CartItensProps)
+export const CartItensContext = createContext({} as CartItensProps);
 
-const CartItenProvider = ({children}: CartItensProviderProps) =>{
-  const [cardProduts, setCardProducts] = React.useState<ProductProps[]>([])
+const CartItenProvider = ({ children }: CartItensProviderProps) => {
+  const [cardProduts, setCardProducts] = React.useState<ProductProps[]>([]);
+  const [loading, setLoading] = React.useState(false);
 
-  const getCartItens = React.useCallback(async() => {
-    try{      
-      const result = await cardItens.getCartItem()
-      setCardProducts(result.data)
-    }catch(error){
-      console.error(error)
-    }
-  },[])
+  React.useEffect(() => {
+    const getCartItens = async () => {
+      try {
+        setLoading(true);
+        const result = await cardItens.getCartItem();
+        setCardProducts(result.data);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-  React.useEffect(() => {  
-    getCartItens()     
-  },[getCartItens,setCardProducts])
+    getCartItens();
+  }, [setCardProducts]);
   return (
-    <CartItensContext.Provider value={{
-      cardProduts,       
-      setCardProducts
-    }}>
+    <CartItensContext.Provider
+      value={{
+        cardProduts,
+        setCardProducts,
+        setLoading,
+        loading
+      }}
+    >
       {children}
     </CartItensContext.Provider>
-  )
-}
+  );
+};
 
-export default CartItenProvider
+export default CartItenProvider;

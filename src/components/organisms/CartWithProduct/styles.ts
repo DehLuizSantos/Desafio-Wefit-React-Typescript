@@ -1,10 +1,9 @@
 import styled, { css } from "styled-components";
 
-export const CartWithProductContainer = styled.div`
+export const CartItemsUserContainer = styled.div`
   ${({theme}) => css`
     background-color: ${theme.colors.white};
     border-radius: 4px;
-    min-height: 716px;
     padding: 16px;
 
     ${theme.responsive.tablet(css`
@@ -19,10 +18,8 @@ export const CartWithProductContainer = styled.div`
         max-width: 80%;
 
         .spancing{
-          margin: 0 170px 0 220px;
-         
-        }
-         
+          margin: 0 170px 0 220px;         
+        }         
       `)}
     }
   `}

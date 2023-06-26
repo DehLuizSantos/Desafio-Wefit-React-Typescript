@@ -1,11 +1,12 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const CartWithoutProductContainer = styled.div`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     background-color: ${theme.colors.white};
     border-radius: 4px;
     padding: 64px;
-    text-align:center;
+    text-align: center;
+    margin: 0 auto;
 
     h2 {
       font-size: ${theme.fonts.xxLarge};
@@ -15,7 +16,7 @@ export const CartWithoutProductContainer = styled.div`
       margin-bottom: 32px;
     }
 
-    .divider{
+    .divider {
       height: 2px;
       width: 96%;
       background-color: ${theme.colors.gray[600]};
@@ -26,17 +27,13 @@ export const CartWithoutProductContainer = styled.div`
         max-width: 447px;
         position: relative;
         margin: 0 auto;
-      
-      
       `)}
-      
-   }
+    }
 
-    .button-go-back{
+    .button-go-back {
       width: 180px;
-      height:40px;
+      height: 40px;
       margin: 32px auto 0 auto;
     }
   `}
-
-`
+`;

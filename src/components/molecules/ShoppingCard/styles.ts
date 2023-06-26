@@ -10,6 +10,11 @@ export const ShoppingCardContainer = styled.div`
     width: 343px;
     margin-bottom: 16px;
 
+    .product-image {
+      max-width: 153px;
+      height:191px;
+    }
+
     ${theme.responsive.laptop(css`
       width: 309px;
       height: 305px;
@@ -22,6 +27,7 @@ export const ShoppingInfos = styled.div`
   ${({theme}) => css`
     font-weight: 700;
     margin-bottom: 8px;
+
     h3{
       color: ${theme.colors.gray[700]};
       font-size: ${theme.fonts.small};

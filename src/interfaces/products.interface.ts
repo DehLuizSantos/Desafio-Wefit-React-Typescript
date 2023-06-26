@@ -4,4 +4,6 @@ export interface ProductProps {
   price: number
   image: string
   quantity?: number
+  added?: boolean,
+  ordem?: number,
 }

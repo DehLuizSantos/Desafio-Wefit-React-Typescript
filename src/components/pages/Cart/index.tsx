@@ -1,18 +1,18 @@
-import React, { useContext } from 'react'
-import { CartItensContext } from '../../../context/cartItens.context'
-import CartWithProduct from '../../organisms/CartWithProduct'
-import CartWithoutProduct from '../../organisms/CartWithoutProduct'
-import * as S from './styles'
+import React, { useContext } from 'react';
+import { CartItensContext } from '../../../context/cartItens.context';
+import * as S from './styles';
+import Loader from '../../atomos/Loader';
+import CartItemsUser from '../../organisms/CartWithProduct';
 
 const Cart: React.FC = () => {
-  const { cardProduts } = useContext(CartItensContext)
-  return(
+  const { cardProduts, loading } = useContext(CartItensContext);
+  return (
+    <Loader loading={loading}>
       <S.ContainerCart>
-        {cardProduts && (
-          cardProduts.length === 0 ? (<CartWithoutProduct />   ) : ( <CartWithProduct />)
-        )}
+        <CartItemsUser cardProduts={cardProduts} />
       </S.ContainerCart>
-    )
-}
+    </Loader>
+  );
+};
 
-export default Cart
+export default Cart;
