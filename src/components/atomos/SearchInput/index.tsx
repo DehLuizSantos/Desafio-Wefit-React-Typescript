@@ -6,6 +6,7 @@ interface SearchInputProps {
   placeholder: string;
   setSearchValue: React.Dispatch<React.SetStateAction<string>>;
   onClickSearch: () => void;
+  onchangeInput: () => void;
   searchValue: string;
   icon?: string;
 }
@@ -15,7 +16,8 @@ const SearchInput = ({
   setSearchValue,
   searchValue,
   icon,
-  onClickSearch
+  onClickSearch,
+  onchangeInput
 }: SearchInputProps) => {
   return (
     <S.SearchInputWrapper>
@@ -24,6 +26,7 @@ const SearchInput = ({
         placeholder={placeholder}
         onChange={(e) => {
           setSearchValue(e.target.value);
+          onchangeInput();
         }}
         value={searchValue}
         onKeyDown={(e) => {

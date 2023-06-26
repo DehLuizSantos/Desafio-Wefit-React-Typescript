@@ -37,6 +37,11 @@ const Main: React.FC = () => {
     <Loader loading={loading}>
       <S.ContainerMain>
         <SearchInput
+          onchangeInput={() => {
+            if (productsFitered.length < 6) {
+              setProductsFiltered(products);
+            }
+          }}
           onClickSearch={() => handleSearch()}
           placeholder="Buscar filme pelo nome"
           setSearchValue={setSearchValue}

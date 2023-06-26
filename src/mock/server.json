@@ -6,7 +6,7 @@
       "price": 9.99,
       "image": "https://wefit-react-web-test.s3.amazonaws.com/viuva-negra.png",
       "quantity": 1,
-      "added": false,
+      "added": true,
       "ordem": 1
     },
     {
@@ -55,5 +55,15 @@
       "ordem": 6
     }
   ],
-  "cartItens": []
+  "cartItens": [
+    {
+      "id": 1,
+      "title": "Viúva Negra",
+      "price": 9.99,
+      "image": "https://wefit-react-web-test.s3.amazonaws.com/viuva-negra.png",
+      "quantity": 1,
+      "added": false,
+      "ordem": 1
+    }
+  ]
 }
