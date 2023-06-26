@@ -5,8 +5,10 @@ import { ProductProps } from '../../../interfaces/products.interface';
 import CartItens from '../../../services/cartItens.service';
 import { CartItensContext } from '../../../context/cartItens.context';
 import CartWithoutProduct from '../CartWithoutProduct';
+import ProductService from '../../../services/products.service';
 
 const cartItens = new CartItens();
+const productsService = new ProductService();
 
 type ShoppingItemsProps = {
   products: Array<ProductProps>;
@@ -21,11 +23,10 @@ const ShoopingItems: React.FC<ShoppingItemsProps> = ({ products, setProducts }) 
       try {
         const cartItem = products.find((product) => product.id === id);
         if (cartItem) {
-          const productWithAdd = products.filter((product) => product.id !== id);
-
-          setProducts([{ ...cartItem, added: true }, ...productWithAdd]);
+          await productsService.putAddCard(id, { ...cartItem, added: true });
+          const { data } = await productsService.getProducts();
+          setProducts(data);
         }
-
         await cartItens.postCartItem(cartItem);
         const result = await cartItens.getCartItem();
         setCardProducts(result.data);

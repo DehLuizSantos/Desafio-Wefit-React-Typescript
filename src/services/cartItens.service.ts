@@ -10,8 +10,8 @@ export default class CartItens {
     });
   }
 
-  public async postCartItem(body:ProductProps | undefined ) {
-    try {     
+  public async postCartItem(body: ProductProps | undefined) {
+    try {
       const response: AxiosResponse = await this.http.post('/cartItens', body);
       return { data: response.data, error: false };
     } catch (error: AxiosError | any) {
@@ -22,7 +22,7 @@ export default class CartItens {
     }
   }
   public async getCartItem() {
-    try {     
+    try {
       const response: AxiosResponse = await this.http.get('/cartItens');
       return { data: response.data, error: false };
     } catch (error: AxiosError | any) {
@@ -33,7 +33,7 @@ export default class CartItens {
     }
   }
   public async deleteCartItem(itemId: number) {
-    try {     
+    try {
       const response: AxiosResponse = await this.http.delete(`/cartItens/${itemId}`);
       return { data: response.data, error: false };
     } catch (error: AxiosError | any) {
@@ -44,8 +44,8 @@ export default class CartItens {
     }
   }
   public async putQuantityItem(id: number, body: ProductProps | undefined) {
-    try {     
-      const response: AxiosResponse = await this.http.put(`/cartItens/${id}`,body);
+    try {
+      const response: AxiosResponse = await this.http.put(`/cartItens/${id}`, body);
       return { data: response.data, error: false };
     } catch (error: AxiosError | any) {
       if (error.response) {

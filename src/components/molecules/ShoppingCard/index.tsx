@@ -33,7 +33,13 @@ export const ShoppingCard: React.FC<ProductProps & ShoopingCardProps> = ({
         <h3>{title}</h3>
         <p>{priceMasked(price)}</p>
       </S.ShoppingInfos>
-      <Button colorStyle={colorBtn} hasIcon hasAdd={added} onClickBtn={() => addToCart(id)}>
+      <Button
+        colorStyle={colorBtn}
+        hasIcon
+        hasAdd={added}
+        onClickBtn={() => addToCart(id)}
+        disabled={added}
+      >
         ADICIONADO AO CARRINHO
       </Button>
     </S.ShoppingCardContainer>

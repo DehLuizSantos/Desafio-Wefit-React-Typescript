@@ -55,15 +55,5 @@
       "ordem": 6
     }
   ],
-  "cartItens": [
-    {
-      "id": 3,
-      "title": "Homem Aranha",
-      "price": 29.9,
-      "image": "https://wefit-react-web-test.s3.amazonaws.com/spider-man.png",
-      "quantity": 1,
-      "added": false,
-      "ordem": 3
-    }
-  ]
+  "cartItens": []
 }

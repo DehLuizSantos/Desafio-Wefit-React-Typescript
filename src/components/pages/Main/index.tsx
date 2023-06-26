@@ -3,7 +3,6 @@ import ShoppingItems from '../../organisms/ShoppingItems';
 import Loader from '../../atomos/Loader';
 import * as S from './styles';
 import { ProductsContext } from '../../../context/products.context';
-import { CartItensContext } from '../../../context/cartItens.context';
 import SearchInput from '../../atomos/SearchInput';
 import { removeAccent } from '../../../utils/validates';
 import { ProductProps } from '../../../interfaces/products.interface';
@@ -12,33 +11,26 @@ const paramSearch = 'title';
 
 const Main: React.FC = () => {
   const { products, setProducts, loading } = useContext(ProductsContext);
-  const { cardProduts } = useContext(CartItensContext);
   const [searchValue, setSearchValue] = React.useState('');
 
-  const productAdded = products.map((product) => {
-    if (cardProduts.some((cardProduct) => cardProduct.id === product.id)) {
-      product.added = true;
-    }
-    return product;
-  });
-  const [productsFitered, setProductsFiltered] = React.useState<ProductProps[]>(productAdded);
+  const [productsFitered, setProductsFiltered] = React.useState<ProductProps[]>(products);
 
   const handleSearch = useCallback(() => {
     const searchToLowerCase = searchValue.toLowerCase();
 
-    const rowsWithFilter = productAdded
-      ? productAdded?.filter((row) => {
+    const rowsWithFilter = products
+      ? products?.filter((row) => {
           return removeAccent(String(row[paramSearch]).toLowerCase()).includes(
             removeAccent(searchToLowerCase)
           );
         })
       : [];
     if (searchValue.length === 0) {
-      setProductsFiltered(productAdded);
+      setProductsFiltered(products);
     } else {
       setProductsFiltered(rowsWithFilter);
     }
-  }, [searchValue, productAdded]);
+  }, [searchValue, products]);
 
   return (
     <Loader loading={loading}>
@@ -51,7 +43,7 @@ const Main: React.FC = () => {
         />
         <ShoppingItems
           setProducts={setProducts}
-          products={productsFitered.length === 0 ? productAdded : productsFitered}
+          products={productsFitered.length === 0 ? products : productsFitered}
         />
       </S.ContainerMain>
     </Loader>
