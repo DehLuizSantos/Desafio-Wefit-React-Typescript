@@ -40,7 +40,7 @@ const ShoopingItems: React.FC<ShoppingItemsProps> = ({ products, setProducts }) 
   return (
     <S.ShoopingItemsContainer>
       {products.length === 0 ? (
-        <CartWithoutProduct />
+        <CartWithoutProduct withGoBack={false} />
       ) : (
         <>
           {products?.map((card: ProductProps) => (

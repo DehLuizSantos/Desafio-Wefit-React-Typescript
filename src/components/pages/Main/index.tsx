@@ -6,6 +6,7 @@ import { ProductsContext } from '../../../context/products.context';
 import SearchInput from '../../atomos/SearchInput';
 import { removeAccent } from '../../../utils/validates';
 import { ProductProps } from '../../../interfaces/products.interface';
+import ResultOfSearch from '../../molecules/ResultOfSearch';
 
 const paramSearch = 'title';
 
@@ -41,9 +42,12 @@ const Main: React.FC = () => {
           setSearchValue={setSearchValue}
           searchValue={searchValue}
         />
+        {searchValue.length > 0 && (
+          <ResultOfSearch resultNumber={productsFitered.length} resultTitle={searchValue} />
+        )}
         <ShoppingItems
           setProducts={setProducts}
-          products={productsFitered.length === 0 ? products : productsFitered}
+          products={searchValue.length > 0 ? productsFitered : products}
         />
       </S.ContainerMain>
     </Loader>
